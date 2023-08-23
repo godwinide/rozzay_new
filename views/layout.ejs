@@ -38,14 +38,43 @@
     <link rel="stylesheet" href="/assets/css/themefisher-fonts.css" />
     <script src="/assets/js/calculator.js"></script>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </head>
 
   <body>
+    <div
+      id="google_translate_element"
+      style="z-index: 10000; position: absolute"
+    ></div>
     <%-body%>
     <script
       src="//code.tidio.co/j0x5v8viqdqwh3zzl4dj42njv4tqvbk0.js"
       async
     ></script>
+
+    <!-- Google Translate Code -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <!-- Detect User's Language and Set Target Language -->
+    <script type="text/javascript">
+      function setTargetLanguage() {
+        var userLang = navigator.language || navigator.userLanguage;
+        google.translate.translatePage(userLang, userLang);
+      }
+    </script>
     <!-- <script src="//code.tidio.co/yikkcfjemofj4j4djuhrwud0yr8zyhdh.js" async></script> -->
     <!-- Begin of Chaport Live Chat code -->
     <!-- <script type="text/javascript">

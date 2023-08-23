@@ -27,6 +27,10 @@
       src="/dashboard/style/bootstrap.min.js"
       type="text/javascript"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
     </style>
@@ -443,6 +447,10 @@
     class="loginarea"
     cz-shortcut-listen="true"
   >
+    <div
+      id="google_translate_element"
+      style="z-index: 10000; position: absolute"
+    ></div>
     <div class="wrapper-account">
       <div class="headerContainer">
         <div class="headerInner">
@@ -801,6 +809,27 @@
       src="//code.tidio.co/j0x5v8viqdqwh3zzl4dj42njv4tqvbk0.js"
       async
     ></script>
+
+    <!-- Google Translate Code -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <!-- Detect User's Language and Set Target Language -->
+    <script type="text/javascript">
+      function setTargetLanguage() {
+        var userLang = navigator.language || navigator.userLanguage;
+        google.translate.translatePage(userLang, userLang);
+      }
+    </script>
     <!-- <script src="//code.tidio.co/yikkcfjemofj4j4djuhrwud0yr8zyhdh.js" async></script> -->
     <!-- Begin of Chaport Live Chat code -->
     <!-- <script type="text/javascript">
